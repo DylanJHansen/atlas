@@ -4,4 +4,4 @@
 
 | Machine | Type | OS | First Seen | Status |
 |---------|------|----|-----------|--------|
-| [machine-name] | [desktop/laptop/server/WSL] | [OS] | [YYYY-MM-DD] | approved |
+| sweet-jane | WSL2/laptop | Ubuntu 24.04.4 LTS | 2026-03-12 | approved |
