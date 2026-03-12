@@ -1,0 +1,33 @@
+# Atlas .gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets — never commit these
+*.env
+.env.*
+secrets/
+*.key
+*.pem
+*.pfx
+
+# Sensitive inbox files (process and move to inbox/processed/)
+inbox/*.png
+inbox/*.jpg
+inbox/*.jpeg
+inbox/*.pdf
+inbox/*.zip
+inbox/*.log
+
+# Keep inbox directory
+!inbox/.gitkeep
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Session lock
+.atlas.session.lock

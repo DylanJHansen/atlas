@@ -1,0 +1,44 @@
+# context/state.yaml — Canonical System State
+# This is the single source of truth for your Atlas instance.
+# Update here first. Claude reads this at session start.
+# Last updated: [YYYY-MM-DD] | Device: [machine-name]
+
+identity:
+  name: "[Your Name]"
+  system: "[your-atlas-name]"    # e.g. "my-atlas" or a custom name
+  version: "1.0.0"
+  machine: "[active-machine]"    # update when switching devices
+
+focus:
+  primary: "[active goal]"       # what you're working on right now
+  queue:
+    - "[next goal]"
+    - "[goal after that]"
+
+# Optional: homelab / infrastructure state
+# Delete this block if not applicable
+homelab:
+  status: "[healthy | degraded | down | n/a]"
+  last_health_check: "[YYYY-MM-DD]"
+  primary_server: "[hostname or IP]"
+
+sessions:
+  last_session: S001
+  next_session_number: 2
+  last_device: "[machine-name]"
+  last_updated: "[YYYY-MM-DD]"
+
+devices:
+  last_active: "[machine-name]"
+  registered:
+    - "[machine-name]"
+
+projects:
+  active:
+    - "[project-name]"    # see context/projects/[project-name].md
+  parked: []
+
+open_todos:
+  - id: "[todo-id]"
+    item: "[description]"
+    opened: "[YYYY-MM-DD]"
