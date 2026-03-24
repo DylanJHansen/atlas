@@ -5,6 +5,45 @@
 
 ---
 
+## SESSION OPENING PROTOCOL
+
+# Every time you open a new session, Claude reads this file and generates a greeting block.
+# The greeting surfaces your current state so you never start from scratch.
+# Customize the motto, fields, and sections to match what matters to you.
+# Claude will auto-populate fields marked {like this} from context/handoff.md and context/state.yaml.
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ATLAS  |  {today's date}  |  {device}
+  "{your motto here}"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  LAST SESSION : {S### — one-line summary from handoff.md}
+  FOCUS        : {primary project or goal}
+  ─────────────────────────────────────────────────
+  TOP TODOS    :
+    1. {open_todos[0] — brief}
+    2. {open_todos[1] — brief}
+    3. {open_todos[2] — brief}
+  ─────────────────────────────────────────────────
+  INFRA        : {infra status if applicable}
+  ─────────────────────────────────────────────────
+  SYSTEM CHECK :
+    Device     : {hostname} — REGISTERED / UNKNOWN
+    boot.sh    : Run ~/[your-repo]/scripts/boot.sh if switching devices or first session of day
+    Claude     : Run /cost for session token usage. Check claude.ai/settings for plan limits.
+    Git        : {clean / uncommitted changes — run git status if unsure}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**How this works:**
+- Claude generates this block at session start by reading `context/handoff.md` + `context/state.yaml`
+- Modify the fields above to match what you want surfaced every session
+- Device registration: Claude checks `context/systems/registry.md` — flag UNKNOWN devices before logging anything
+- boot.sh: handles crash recovery and pending system detection — run it on first session of the day or after switching machines
+- The motto is yours — pick something that sets your operating mode for the session
+
+---
+
 ## WHO I AM
 
 **Name:** [Your full name]
