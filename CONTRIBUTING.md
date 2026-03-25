@@ -62,6 +62,7 @@ Every PR should:
 
 PRs that add agent templates must include:
 - A complete `CLAUDE.md` following the spec in `agents/AGENTS.md`
+- A `## Handoff to Root` section following the pattern in `docs/multi-agent-handoff.md`
 - At least one example use case in the file
 
 ---
