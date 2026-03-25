@@ -9,8 +9,9 @@
 
 # Every time you open a new session, Claude reads this file and generates a greeting block.
 # The greeting surfaces your current state so you never start from scratch.
-# Customize the motto, fields, and sections to match what matters to you.
+# Customize the system name, motto, fields, and sections to match what matters to you.
 # Claude will auto-populate fields marked {like this} from context/handoff.md and context/state.yaml.
+# Replace ATLAS below with your chosen system name — the name of your AI OS (e.g. JARVIS, OPUS, FORGE).
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -41,6 +42,14 @@
 - Device registration: Claude checks `context/systems/registry.md` — flag UNKNOWN devices before logging anything
 - boot.sh: handles crash recovery and pending system detection — run it on first session of the day or after switching machines
 - The motto is yours — pick something that sets your operating mode for the session
+
+**After the greeting block, always ask a proactive opening question — do not wait for the user to prompt you.** Read the context and ask the most relevant question. Examples:
+- Active deadline (exam, launch, release): "Want to work on [X], review [gap/status], or something else today?"
+- Continuing project: "Picking up [project] from last session — continue that or switching gears?"
+- Multiple open items: "You've got [X], [Y], and [Z] open — where do you want to start?"
+- No specific context: "What are we building today?"
+
+The question should feel like someone who read the context and has a point of view — not a generic prompt.
 
 ---
 
