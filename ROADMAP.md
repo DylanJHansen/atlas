@@ -38,6 +38,7 @@ If you want something on this list, open an Issue or a PR.
 ### v1.1.0 — Stability + Onboarding
 
 - `[active]` `init.sh` — full end-to-end test on clean clone
+- `[done]` `docs/multi-agent-handoff.md` — root→agent→agent→root handoff pattern, state at boundaries, common mistakes
 - `[planned]` GitHub Issue templates — bug report, feature request, agent request
 - `[planned]` `CHANGELOG.md` — running change log per version
 - `[planned]` `docs/multi-device.md` — guide for using Atlas across multiple machines
