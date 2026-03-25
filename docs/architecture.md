@@ -10,6 +10,15 @@ The root `CLAUDE.md` is read by Claude Code automatically on every session start
 
 Every agent also has its own `CLAUDE.md` in `agents/[name]/`. When you invoke an agent by trigger phrase, Claude loads that context and operates within its scope.
 
+### Session Opening Pattern
+
+Every Atlas session starts the same way:
+
+1. **Greeting block** — Claude reads `context/state.yaml` and `context/handoff.md`, then renders a structured status block showing last session, current focus, top TODOs, infra status, and system check.
+2. **Proactive question** — Claude reads the context and immediately asks what you want to work on, framed around what's actually open. You should never have to type "let's get started." Atlas starts.
+
+This is the fundamental UX contract: Atlas greets you and asks the first question. You answer. The session is running.
+
 ---
 
 ## Layer 2: State (`context/`)
